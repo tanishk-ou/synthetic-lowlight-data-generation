@@ -58,6 +58,35 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 ```
+### 2. How to Use
+
+1. **Clone the Repository**
+```
+git clone https://github.com/tanishk-ou/synthetic-lowlight-data-generation.git
+cd synthetic-lowlight-data-generation
+```
+2. **Prepare Your Source Dataset**
+Place your source images (e.g., from the COCO dataset) into a directory.
+
+3. **Configure the Generation Script**
+Open `generate_low_light_new_coco.py` and modify the following variables:
+
+```
+# --- Source and Target Directories ---
+
+SOURCE_DIR = "/path/to/your/srgb_images"
+TARGET_DIR = "/path/to/your/output_low_light_images"
+
+# --- Tunable Parameters ---
+
+ILLUMINATION_DARKEN_FACTOR = 0.01  # How dark to make the image
+NOISE_LEVEL = 0.0001               # Multiplier for shot/read noise
+CONTRAST_STRENGTH = 0.8            # S-curve strength (0.0 = no change)
+SATURATION_BOOST = 1.2             # Saturation multiplier (1.0 = no change)
+```
+
+4. **Run the Pipeline**
+``` python generate_low_light_new_coco.py ```   
 ## Acknowledgements
 
 This project utilizes code that is heavily based on the official repository for "Unprocessing Images for Learned Raw Denoising." We are grateful to the original authors for their contribution to the community.
