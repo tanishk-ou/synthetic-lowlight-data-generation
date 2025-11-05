@@ -86,10 +86,15 @@ SATURATION_BOOST = 1.2             # Saturation multiplier (1.0 = no change)
 ```
 
 4. **Run the Pipeline**
-``` python generate_low_light_new_coco.py ```   
+```
+python generate_low_light_new_coco.py
+```
+The script will process all images in `SOURCE_DIR` and save the low-light versions in `TARGET_DIR`, preserving the original filenames.
+
+
 ## Acknowledgements
 
-This project utilizes code that is heavily based on the official repository for "Unprocessing Images for Learned Raw Denoising." We are grateful to the original authors for their contribution to the community.
+This work builds upon the official repository for “Unprocessing Images for Learned Raw Denoising” and is heavily inspired by the paper. We are grateful to the original authors for their contribution to the community.
 
 * **Original Project:** [Link to the original repository](https://github.com/google-research/google-research/tree/master/unprocessing)
 * **Original Paper:** > Brooks, T., Mildenhall, B., et al. (2019). 
@@ -100,3 +105,8 @@ The original software is licensed under the Apache License, Version 2.0. A full 
 
 ---
 *This project is not endorsed by or affiliated with the original authors.*
+
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE` file for details.
